@@ -69,7 +69,7 @@ export default function Header({ onNavigate, activePath }) {
                 >
                   {item.name}
                   <span
-                    className={`absolute -bottom-1 left-0 h-[2px] bg-primary shadow-[0_0_10px_#10b981] transition-all duration-300 ${
+                    className={`absolute -bottom-1 left-0 h-[2px] bg-primary transition-all duration-300 ${
                       isActive
                         ? "w-full opacity-100"
                         : "w-0 opacity-0 group-hover:w-full group-hover:opacity-100"
@@ -85,7 +85,7 @@ export default function Header({ onNavigate, activePath }) {
               href="/Muhammad_Fahad_Raza_CV.pdf"
               download
               rel="noopener noreferrer"
-              className="hidden lg:block primary-gradient text-on-primary-container px-9 py-3.5 rounded-xl font-bold text-sm shimmer-btn shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_45px_rgba(16,185,129,0.5)] transition-all"
+              className="hidden lg:block bg-primary text-surface px-9 py-3.5 rounded-xl font-bold text-sm hover:bg-primary/90 border border-primary/25 transition-all hover:-translate-y-0.5 shadow-md active:scale-95 duration-200"
             >
               Download CV
             </a>
@@ -112,7 +112,7 @@ export default function Header({ onNavigate, activePath }) {
 
       {/* Drawer Panel */}
       <div
-        className={`fixed top-0 right-0 bottom-0 w-3/4 max-w-sm z-50 bg-[#0e1511]/95 backdrop-blur-2xl border-l border-outline-variant/20 p-8 flex flex-col transition-transform duration-300 transform md:hidden ${
+        className={`fixed top-0 right-0 bottom-0 w-3/4 max-w-sm z-50 bg-[#0B0F19]/95 backdrop-blur-2xl border-l border-outline-variant/20 p-8 flex flex-col transition-transform duration-300 transform md:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -152,7 +152,7 @@ export default function Header({ onNavigate, activePath }) {
             href="/Muhammad_Fahad_Raza_CV.pdf"
             download
             rel="noopener noreferrer"
-            className="w-full text-center block primary-gradient text-on-primary-container px-6 py-4 rounded-xl font-bold text-sm shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_45px_rgba(16,185,129,0.5)] transition-all"
+            className="w-full text-center block bg-primary text-surface px-6 py-4 rounded-xl font-bold text-sm hover:bg-primary/90 border border-primary/25 transition-all active:scale-95 duration-200"
             onClick={() => setIsMenuOpen(false)}
           >
             Download CV

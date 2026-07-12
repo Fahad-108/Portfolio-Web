@@ -74,7 +74,7 @@ export default function Contact() {
       }`}
     >
       {/* Background radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[160px] rounded-full pointer-events-none -z-10"></div>
 
       <div className="mb-24 text-left">
         <span className="font-label-mono text-label-mono text-primary tracking-[0.3em] uppercase mb-4 block">
@@ -98,23 +98,23 @@ export default function Contact() {
             Contact Information
           </h3>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {contactDetails.map((detail, idx) => (
               <a
                 key={idx}
                 href={detail.link}
                 target={detail.link.startsWith("http") ? "_blank" : "_self"}
                 rel="noreferrer"
-                className="glass-card-premium p-6 rounded-2xl flex items-center gap-6 hover:border-primary/30 transition-all duration-300 group hover:-translate-y-1"
+                className="flex items-center gap-5 p-4 rounded-xl hover:bg-surface-container/30 border border-transparent hover:border-outline-variant/20 transition-all duration-300 group"
               >
-                <div className="p-3.5 bg-primary/10 rounded-xl group-hover:bg-primary/20 transition-all text-primary flex items-center justify-center">
-                  <detail.icon size={24} />
+                <div className="p-3 bg-primary/10 group-hover:bg-primary/20 rounded-xl text-primary transition-all flex items-center justify-center shrink-0">
+                  <detail.icon size={20} />
                 </div>
                 <div>
-                  <h4 className="font-label-mono text-xs uppercase tracking-wider text-on-surface-variant/70">
+                  <h4 className="font-label-mono text-[11px] uppercase tracking-[0.15em] text-on-surface-variant/50">
                     {detail.title}
                   </h4>
-                  <p className="font-body-md text-sm md:text-base text-on-surface font-medium mt-1 truncate max-w-[250px] sm:max-w-md">
+                  <p className="font-body-md text-sm md:text-base text-on-surface font-medium mt-1 truncate max-w-[200px] sm:max-w-md">
                     {detail.value}
                   </p>
                 </div>
@@ -127,7 +127,7 @@ export default function Contact() {
         <div className="lg:col-span-7">
           <form
             onSubmit={handleSubmit}
-            className="glass-premium p-6 sm:p-10 rounded-[1rem] border border-outline-variant/20 shadow-[0_30px_60px_rgba(0,0,0,0.15)] space-y-8 relative"
+            className="card-surface-premium p-6 sm:p-10 rounded-[1rem] border border-outline-variant/20 shadow-[0_30px_60px_rgba(0,0,0,0.15)] space-y-8 relative"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-3">
@@ -193,7 +193,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full primary-gradient text-on-primary-container py-5 rounded-2xl font-extrabold flex items-center justify-center gap-4 group shimmer-btn shadow-[0_20px_50px_-10px_rgba(16,185,129,0.4)] hover:-translate-y-1.5 transition-all duration-300 active:scale-95 cursor-pointer"
+              className="w-full bg-primary text-surface py-5 rounded-2xl font-extrabold flex items-center justify-center gap-4 group hover:bg-primary/90 border border-primary/25 shadow-md hover:-translate-y-1 transition-all duration-300 active:scale-95 cursor-pointer"
             >
               Send Message
               <ArrowRight className="group-hover:translate-x-2 transition-transform" size={24} />

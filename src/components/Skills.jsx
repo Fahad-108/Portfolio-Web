@@ -3,6 +3,7 @@ import { Code2, Server, Database, Wrench } from "lucide-react";
 
 export default function Skills() {
   const [animateBars, setAnimateBars] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const skillsRef = useRef(null);
 
   useEffect(() => {
@@ -10,8 +11,9 @@ export default function Skills() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setAnimateBars(true);
-          }
+    setAnimateBars(true);
+    setIsVisible(true);
+}
         });
       },
       { threshold: 0.1 }
@@ -25,10 +27,14 @@ export default function Skills() {
 
   return (
     <section
-      ref={skillsRef}
-      className="relative py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto overflow-hidden"
-      id="skills"
-    >
+  ref={skillsRef}
+  id="skills"
+  className={`relative py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto overflow-hidden transition-all duration-1000 ${
+    isVisible
+      ? "opacity-100 translate-y-0"
+      : "opacity-0 translate-y-10"
+  }`}
+>
       <div className="mb-24">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-8">
           <div className="max-w-3xl text-left">
@@ -50,7 +56,7 @@ export default function Skills() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Frontend */}
-        <div className="glass-card-premium p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2rem] group relative">
+        <div className="card-surface-premium p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2rem] group relative">
           <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"></div>
           <div className="mb-8 flex justify-between items-center">
             <div className="p-3 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-all flex items-center justify-center">
@@ -93,15 +99,15 @@ export default function Skills() {
               </div>
             </div>
             <div className="flex flex-wrap gap-2 mt-6 pt-6 border-t border-outline-variant/20">
-              <span className="px-3 py-1 glass-pill text-[10px] rounded-lg tracking-wider uppercase">HTML5</span>
-              <span className="px-3 py-1 glass-pill text-[10px] rounded-lg tracking-wider uppercase">CSS3</span>
-              <span className="px-3 py-1 glass-pill text-[10px] rounded-lg tracking-wider uppercase">JavaScript</span>
+              <span className="px-3 py-1 badge-pill text-[10px] rounded-lg tracking-wider uppercase">HTML5</span>
+              <span className="px-3 py-1 badge-pill text-[10px] rounded-lg tracking-wider uppercase">CSS3</span>
+              <span className="px-3 py-1 badge-pill text-[10px] rounded-lg tracking-wider uppercase">JavaScript</span>
             </div>
           </div>
         </div>
 
         {/* Backend */}
-        <div className="glass-card-premium p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2rem] group relative">
+        <div className="card-surface-premium p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2rem] group relative">
           <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"></div>
           <div className="mb-8 flex justify-between items-center">
             <div className="p-3 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-all flex items-center justify-center">
@@ -144,14 +150,14 @@ export default function Skills() {
               </div>
             </div>
             <div className="flex flex-wrap gap-2 mt-6 pt-6 border-t border-outline-variant/20">
-              <span className="px-3 py-1 glass-pill text-[10px] rounded-lg tracking-wider uppercase">REST API</span>
-              <span className="px-3 py-1 glass-pill text-[10px] rounded-lg tracking-wider uppercase">JWT Authentication</span>
+              <span className="px-3 py-1 badge-pill text-[10px] rounded-lg tracking-wider uppercase">REST API</span>
+              <span className="px-3 py-1 badge-pill text-[10px] rounded-lg tracking-wider uppercase">JWT Authentication</span>
             </div>
           </div>
         </div>
 
         {/* Database */}
-        <div className="glass-card-premium p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2rem] group relative">
+        <div className="card-surface-premium p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2rem] group relative">
           <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"></div>
           <div className="mb-8 flex justify-between items-center">
             <div className="p-3 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-all flex items-center justify-center">
@@ -194,14 +200,14 @@ export default function Skills() {
               </div>
             </div>
             <div className="flex flex-wrap gap-2 mt-6 pt-6 border-t border-outline-variant/20">
-              <span className="px-3 py-1 glass-pill text-[10px] rounded-lg tracking-wider uppercase">MongoDB Atlas</span>
-              <span className="px-3 py-1 glass-pill text-[10px] rounded-lg tracking-wider uppercase">Mongoose</span>
+              <span className="px-3 py-1 badge-pill text-[10px] rounded-lg tracking-wider uppercase">MongoDB Atlas</span>
+              <span className="px-3 py-1 badge-pill text-[10px] rounded-lg tracking-wider uppercase">Mongoose</span>
             </div>
           </div>
         </div>
 
         {/* Tools */}
-        <div className="glass-card-premium p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2rem] group relative">
+        <div className="card-surface-premium p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2rem] group relative">
           <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"></div>
           <div className="mb-8 flex justify-between items-center">
             <div className="p-3 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-all flex items-center justify-center">
@@ -244,8 +250,8 @@ export default function Skills() {
               </div>
             </div>
             <div className="flex flex-wrap gap-2 mt-6 pt-6 border-t border-outline-variant/20">
-              <span className="px-3 py-1 glass-pill text-[10px] rounded-lg tracking-wider uppercase">VS Code</span>
-              <span className="px-3 py-1 glass-pill text-[10px] rounded-lg tracking-wider uppercase">Antigravity</span>
+              <span className="px-3 py-1 badge-pill text-[10px] rounded-lg tracking-wider uppercase">VS Code</span>
+              <span className="px-3 py-1 badge-pill text-[10px] rounded-lg tracking-wider uppercase">Antigravity</span>
             </div>
           </div>
         </div>

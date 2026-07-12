@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Terminal, Rocket } from "lucide-react";
 import Dukaan from "../images/Dukaan.JPG";
 import Mini from "../images/MiniXpress.png";
 import Ticket from "../images/TicketXpress.JPG";
 
 export default function Projects() {
+  
+  const [isVisible, setIsVisible] = useState(false);
+const sectionRef = useRef(null);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+      }
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  if (sectionRef.current) {
+    observer.observe(sectionRef.current);
+  }
+
+  return () => observer.disconnect();
+}, []);
+  
   // Custom Tilt handlers
   const handleMouseMove = (e) => {
     const card = e.currentTarget;
@@ -28,9 +51,14 @@ export default function Projects() {
 
   return (
     <section
-      className="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto relative"
-      id="projects"
-    >
+  ref={sectionRef}
+  id="projects"
+  className={`py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto relative transition-all duration-1000 ${
+    isVisible
+      ? "opacity-100 translate-y-0"
+      : "opacity-0 translate-y-10"
+  }`}
+>
       <div className="mb-24 text-left">
         <span className="font-label-mono text-label-mono text-primary tracking-[0.3em] uppercase mb-4 block">
           FEATURED PROJECTS
@@ -50,7 +78,7 @@ export default function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Project Card 1 */}
         <div
-          className="project-grid-item project-card glass-card-premium rounded-[2.5rem] overflow-hidden group flex flex-col h-full transition-all duration-300"
+          className="project-grid-item project-card card-surface-interactive rounded-[2.5rem] overflow-hidden group flex flex-col h-full transition-all duration-300"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
         >
@@ -60,9 +88,9 @@ export default function Projects() {
               alt="Dukaan Digital POS"
               src={Dukaan}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80"></div>
-            <div className="absolute top-6 left-6">
-              <span className="px-4 py-2 bg-slate-900/80 backdrop-blur-md text-white text-xs font-bold rounded-full border border-white/10 tracking-wider shadow-lg">
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background to-transparent opacity-90"></div>
+            <div className="absolute top-4 left-4">
+              <span className="px-3.5 py-1.5 bg-[#050810]/95 backdrop-blur-md text-primary text-[10px] font-label-mono uppercase tracking-wider rounded-lg border border-outline-variant/30 shadow-md">
                 MERN Stack
               </span>
             </div>
@@ -74,9 +102,9 @@ export default function Projects() {
             <p className="text-on-surface-variant/90 font-body-md mb-10 leading-relaxed min-h-[140px] flex-grow">
               A complete MERN Stack application featuring inventory management, sales and purchase tracking, expense management, customer credit (Udhaar), secure authentication, interactive dashboards, and a fully responsive user interface for modern retail businesses.
             </p>
-            <div className="mt-auto flex gap-4 sm:gap-6">
+            <div className="flex gap-4 pt-6 border-t border-outline-variant/20 mt-auto">
               <a
-                className="flex-1 px-4 py-4 bg-surface-container/40 hover:bg-surface-container-high text-primary font-semibold rounded-2xl text-center transition-all border border-outline-variant/20 flex items-center justify-center gap-3 group/btn"
+                className="flex-1 px-4 py-4 bg-surface-container/40 hover:bg-surface-container/60 text-on-surface border border-outline-variant/30 font-semibold rounded-2xl text-center transition-all duration-300 flex items-center justify-center gap-3 group/btn hover:border-primary/30"
                 href="https://github.com/Fahad-108/Dukaan-Digital" target="_blank" rel="noopener noreferrer"
               >
                 <Terminal className="group-hover/btn:rotate-12 transition-transform" size={20} />
@@ -94,7 +122,7 @@ export default function Projects() {
 
         {/* Project Card 2 */}
         <div
-          className="project-grid-item project-card glass-card-premium rounded-[2.5rem] overflow-hidden group flex flex-col h-full transition-all duration-300"
+          className="project-grid-item project-card card-surface-interactive rounded-[2.5rem] overflow-hidden group flex flex-col h-full transition-all duration-300"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
         >
@@ -104,9 +132,9 @@ export default function Projects() {
               alt="Expense Tracker"
               src={Ticket}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80"></div>
-            <div className="absolute top-6 left-6">
-              <span className="px-4 py-2 bg-slate-900/80 backdrop-blur-md text-white text-xs font-bold rounded-full border border-white/10 tracking-wider shadow-lg">
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background to-transparent opacity-90"></div>
+            <div className="absolute top-4 left-4">
+              <span className="px-3.5 py-1.5 bg-[#050810]/95 backdrop-blur-md text-primary text-[10px] font-label-mono uppercase tracking-wider rounded-lg border border-outline-variant/30 shadow-md">
                 HTML • CSS • JavaScript
               </span>
             </div>
@@ -118,9 +146,9 @@ export default function Projects() {
             <p className="text-on-surface-variant/90 font-body-md mb-10 leading-relaxed min-h-[140px] flex-grow">
               A responsive frontend bus ticket booking platform featuring modern UI design, animated interactions with GSAP, authentication pages, and an intuitive booking experience.
             </p>
-            <div className="mt-auto flex gap-4 sm:gap-6">
+            <div className="flex gap-4 pt-6 border-t border-outline-variant/20 mt-auto">
               <a
-                className="flex-1 px-4 py-4 bg-surface-container/40 hover:bg-surface-container-high text-primary font-semibold rounded-2xl text-center transition-all border border-outline-variant/20 flex items-center justify-center gap-3 group/btn"
+                className="flex-1 px-4 py-4 bg-surface-container/40 hover:bg-surface-container/60 text-on-surface border border-outline-variant/30 font-semibold rounded-2xl text-center transition-all duration-300 flex items-center justify-center gap-3 group/btn hover:border-primary/30"
                 href="https://github.com/Fahad-108/TicketXpress"
               >
                 <Terminal className="group-hover/btn:rotate-12 transition-transform" size={20} />
@@ -137,7 +165,7 @@ export default function Projects() {
 
         {/* Project Card 3 */}
         <div
-          className="project-grid-item project-card glass-card-premium rounded-[2.5rem] overflow-hidden group flex flex-col h-full transition-all duration-300"
+          className="project-grid-item project-card card-surface-interactive rounded-[2.5rem] overflow-hidden group flex flex-col h-full transition-all duration-300"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
         >
@@ -147,9 +175,9 @@ export default function Projects() {
               alt="Chat Application"
               src={Mini}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80"></div>
-            <div className="absolute top-6 left-6">
-              <span className="px-4 py-2 bg-slate-900/80 backdrop-blur-md text-white text-xs font-bold rounded-full border border-white/10 tracking-wider shadow-lg">
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background to-transparent opacity-90"></div>
+            <div className="absolute top-4 left-4">
+              <span className="px-3.5 py-1.5 bg-[#050810]/95 backdrop-blur-md text-primary text-[10px] font-label-mono uppercase tracking-wider rounded-lg border border-outline-variant/30 shadow-md">
                 React.js
               </span>
             </div>
@@ -161,9 +189,9 @@ export default function Projects() {
             <p className="text-on-surface-variant/90 font-body-md mb-10 leading-relaxed min-h-[140px] flex-grow">
               An all-in-one React application featuring task management, mini games, useful productivity tools, responsive design, and seamless Dark/Light mode switching.
             </p>
-            <div className="mt-auto flex gap-4 sm:gap-6">
+            <div className="flex gap-4 pt-6 border-t border-outline-variant/20 mt-auto">
               <a
-                className="flex-1 px-4 py-4 bg-surface-container/40 hover:bg-surface-container-high text-primary font-semibold rounded-2xl text-center transition-all border border-outline-variant/20 flex items-center justify-center gap-3 group/btn"
+                className="flex-1 px-4 py-4 bg-surface-container/40 hover:bg-surface-container/60 text-on-surface border border-outline-variant/30 font-semibold rounded-2xl text-center transition-all duration-300 flex items-center justify-center gap-3 group/btn hover:border-primary/30"
                 href="https://github.com/Fahad-108/MINIEXPRESS" target="_blank" rel="noopener noreferrer"
               >
                 <Terminal className="group-hover/btn:rotate-12 transition-transform" size={20} />

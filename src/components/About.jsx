@@ -46,8 +46,8 @@ export default function About() {
   const stats = [
     { number: "10+", label: "Projects Built" },
     { number: "15+", label: "Technologies" },
-    { number: "100%", label: "Dedication" },
-    { number: "24/7", label: "Learning" },
+    { number: "4+", label: "MERN Stack Apps" },
+    { number: "2+", label: "Years Coding" },
   ];
 
   return (
@@ -58,7 +58,7 @@ export default function About() {
         }`}
     >
       {/* Background radial glow */}
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -z-10 animate-pulse"></div>
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-primary/5 blur-[160px] rounded-full pointer-events-none -z-10"></div>
 
       {/* Header */}
       <div className="mb-20 text-left">
@@ -72,7 +72,7 @@ export default function About() {
         <p className="max-w-2xl font-body-lg text-body-lg text-on-surface-variant/90 leading-relaxed">
           Get to know more about my journey, passion, and the technologies I use to build modern web applications.
         </p>
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-start mt-8">
           <div className="h-[2px] w-48 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
         </div>
       </div>
@@ -83,14 +83,14 @@ export default function About() {
         <div className="lg:col-span-7 space-y-8">
           <div className="space-y-6 text-on-surface-variant/90 font-body-md text-base md:text-lg leading-relaxed">
             <p>
-              I'm <span className="text-on-surface font-semibold decoration-primary/50 underline underline-offset-4 decoration-2">Muhammad Fahad Raza</span>, a passionate Full Stack MERN Developer and BS Information Technology student who enjoys transforming ideas into scalable and user-friendly web applications. I focus on writing clean, maintainable code while delivering responsive and high-performance digital experiences.
+              I'm <span className="text-on-surface font-semibold decoration-primary/50 underline underline-offset-4 decoration-2">Muhammad Fahad Raza</span>, a MERN Stack Developer with a background in Information Technology. I focus on bridging the gap between back-end architecture and front-end user experience. Rather than just writing code, I love designing systems that scale, optimizing databases, and crafting clean, maintainable logic that solves real problems.
             </p>
             <p>
-              I continuously improve my skills by building real-world projects and exploring modern technologies. My goal is to become a skilled software engineer, contribute to impactful products, and work with innovative teams that value creativity, collaboration, and continuous learning.
+              I enjoy working across the entire stack—designing RESTful APIs, securing routes, structuring MongoDB collections, and building smooth, responsive React interfaces. I spend my time building projects that challenge me to learn new design systems and optimization strategies.
             </p>
           </div>
 
-          <div className="glass-premium p-6 rounded-2xl border border-primary/20 bg-primary/5 flex items-center gap-4">
+          <div className="card-surface-premium p-6 rounded-2xl border border-primary/20 bg-primary/5 flex items-center gap-4">
             <Lightbulb className="text-primary text-3xl" size={30} />
             <p className="font-body-md text-sm md:text-base text-primary font-semibold tracking-wide italic">
               "Always learning, always building, and always striving to create better digital experiences."
@@ -98,18 +98,15 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right Column: Info Cards Grid */}
-        <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {/* Right Column: Info List */}
+        <div className="lg:col-span-5 space-y-8 pl-6 border-l border-outline-variant/30 py-2 lg:ml-6">
           {infoCards.map((card, idx) => (
-            <div
-              key={idx}
-              className="glass-card-premium p-6 rounded-2xl flex flex-col justify-between hover:border-primary/30 transition-all duration-300 group hover:-translate-y-1"
-            >
-              <div className="p-3 bg-primary/10 rounded-xl w-fit text-primary mb-4 group-hover:bg-primary/20 transition-all flex items-center justify-center">
-                <card.icon size={24} />
+            <div key={idx} className="group flex items-start gap-4">
+              <div className="p-3 bg-primary/10 rounded-xl text-primary group-hover:bg-primary/20 transition-all flex items-center justify-center shrink-0">
+                <card.icon size={20} />
               </div>
               <div>
-                <h4 className="font-label-mono text-xs uppercase tracking-wider text-on-surface-variant/60">
+                <h4 className="font-label-mono text-[11px] uppercase tracking-[0.15em] text-on-surface-variant/50">
                   {card.title}
                 </h4>
                 <p className="font-body-md text-sm md:text-base text-on-surface font-semibold mt-1">
@@ -126,7 +123,7 @@ export default function About() {
         {stats.map((stat, idx) => (
           <div
             key={idx}
-            className="glass-premium p-6 rounded-2xl text-center flex flex-col justify-center items-center hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
+            className="card-surface-premium p-6 rounded-2xl text-left flex flex-col justify-start items-start hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
           >
             <span className="font-display-lg text-4xl md:text-5xl font-black text-primary block tracking-tight mb-2">
               {stat.number}

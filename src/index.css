@@ -2,54 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CSS Theme Variables - Default Dark Theme */
+/* CSS Theme Variables - Default Dark Emerald Theme */
 :root {
-  /* Main Colors (RGB for opacity modifiers) - Pixel-perfect original Dark Theme */
-  --color-primary-rgb: 78 222 163;          /* #4edea3 */
-  --color-secondary-rgb: 79 219 200;        /* #4fdbc8 */
-  --color-bg-rgb: 14 21 17;                 /* #0e1511 */
-  --color-on-surface-rgb: 221 228 221;      /* #dde4dd */
-  --color-on-surface-variant-rgb: 187 202 191; /* #bbcabf */
-  --color-heading-rgb: 255 255 255;         /* #ffffff */
+  /* Main Colors (RGB for opacity modifiers) - Dark Emerald Theme */
+  --color-primary-rgb: 16 185 129;          /* #10B981 (Emerald Green Accent) */
+  --color-secondary-rgb: 5 150 105;        /* #059669 (Deep Emerald Accent) */
+  --color-bg-rgb: 14 21 17;                 /* #0E1511 (Dark Emerald Background) */
+  --color-on-surface-rgb: 241 245 249;      /* #F1F5F9 (Slate Light text) */
+  --color-on-surface-variant-rgb: 148 163 184; /* #94A3B8 (Slate Gray variant) */
+  --color-heading-rgb: 255 255 255;         /* #FFFFFF (Heading text) */
 
   /* Containers & Borders */
-  --surface-lowest-rgb: 9 16 12;            /* #09100c */
-  --surface-low-rgb: 22 29 25;              /* #161d19 */
-  --surface-container-rgb: 26 33 29;        /* #1a211d */
-  --surface-high-rgb: 36 44 39;             /* #242c27 */
-  --surface-highest-rgb: 47 54 50;          /* #2f3632 */
-  --outline-variant-rgb: 60 74 66;          /* #3c4a42 */
-  --outline-rgb: 134 148 138;               /* #86948a */
+  --surface-lowest-rgb: 9 16 12;            /* #09100C */
+  --surface-low-rgb: 22 29 25;              /* #161D19 (Emerald Dark card) */
+  --surface-container-rgb: 26 33 29;        /* #1A211D (Emerald Border card) */
+  --surface-high-rgb: 36 44 39;             /* #242C27 */
+  --surface-highest-rgb: 47 54 50;          /* #2F3632 */
+  --outline-variant-rgb: 60 74 66;          /* #3C4A42 border */
+  --outline-rgb: 134 148 138;               /* #86948A */
 
-  /* Custom Class variables */
-  --glass-bg: rgba(14, 21, 17, 0.4);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1), 0 20px 40px rgba(0, 0, 0, 0.4);
+  /* Custom Class variables - Solid Emerald Cards with Clean Spacing */
+  --card-bg: rgba(14, 21, 17, 0.96);
+  --card-border: rgba(60, 74, 66, 0.8);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   
-  --glass-card-bg: rgba(14, 21, 17, 0.3);
-  --glass-card-border: rgba(78, 222, 163, 0.1);
-  --glass-card-shadow: 0 40px 100px -30px rgba(0, 0, 0, 0.5);
-  --glass-card-hover-border: rgba(78, 222, 163, 0.5);
-  --glass-card-hover-shadow: 0 0 40px rgba(16, 185, 129, 0.15), inset 0 0 20px rgba(78, 222, 163, 0.05);
+  --card-interactive-bg: rgba(22, 29, 25, 0.98);
+  --card-interactive-border: rgba(60, 74, 66, 0.6);
+  --card-interactive-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  --card-interactive-hover-border: rgba(16, 185, 129, 0.25);
+  --card-interactive-hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 
-  --vignette-bg: radial-gradient(circle at center, transparent 20%, rgba(9, 16, 12, 0.85) 100%);
-  --text-gradient-header: linear-gradient(135deg, #4edea3 0%, #71f8e4 100%);
+  --vignette-bg: radial-gradient(circle at center, transparent 30%, rgba(9, 16, 12, 0.98) 100%);
+  --text-gradient-header: linear-gradient(135deg, #FFFFFF 0%, #10B981 100%);
 
-  --glass-pill-bg: rgba(78, 222, 163, 0.1);
-  --glass-pill-border: rgba(78, 222, 163, 0.3);
-  --glass-pill-text: #4edea3;
+  --badge-pill-bg: rgba(16, 185, 129, 0.08);
+  --badge-pill-border: rgba(16, 185, 129, 0.2);
+  --badge-pill-text: #10B981;
 
-  --btn-primary-bg: linear-gradient(135deg, #10b981, #04b4a2);
-  --btn-primary-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
-  --btn-primary-hover-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+  --btn-primary-bg: linear-gradient(135deg, #10b981, #059669);
+  --btn-primary-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.2);
+  --btn-primary-hover-shadow: 0 6px 20px 0 rgba(16, 185, 129, 0.35);
 
-  --code-glass-bg: rgba(16, 185, 129, 0.03);
-  --code-glass-border: rgba(16, 185, 129, 0.2);
-  --code-glass-text: #bbcabf;
-  --code-glass-highlight: #4edea3;
+  --code-panel-bg: rgba(15, 23, 42, 0.3);
+  --code-panel-border: rgba(30, 41, 59, 0.5);
+  --code-panel-text: #E2E8F0;
+  --code-panel-highlight: #10B981;
 
-  --grid-color: rgba(16, 185, 129, 0.06); /* Soft emerald grid pattern */
-  --on-primary-container: #00422b;
+  --grid-color: rgba(16, 185, 129, 0.04); /* Subtly soft grid */
+  --on-primary-container: #ffffff;
 }
 
 /* Premium Background Grid Canvas */
@@ -74,19 +74,15 @@ body::before {
 .delay-1 { animation-delay: 1.5s; }
 .delay-2 { animation-delay: 3s; }
 
-.glass-premium {
-  background: var(--glass-bg);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
+.card-surface-premium {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
 }
 
-.code-glass {
-  background: var(--code-glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--code-glass-border);
+.card-code-panel {
+  background: var(--code-panel-bg);
+  border: 1px solid var(--code-panel-border);
 }
 
 .shimmer-btn {
@@ -151,25 +147,10 @@ body::before {
   border-radius: 50%;
   transform: translateX(-50%);
   animation: scroll-anim 2.5s infinite;
-  box-shadow: 0 0 10px #10b981;
 }
 @keyframes scroll-anim {
   0% { opacity: 1; transform: translate(-50%, 0); }
   100% { opacity: 0; transform: translate(-50%, 22px); }
-}
-
-.rotating-aura {
-  position: absolute;
-  width: 140%;
-  height: 140%;
-  border: 1px solid rgba(16, 185, 129, 0.15);
-  border-radius: 40%;
-  animation: rotate-aura 25s linear infinite;
-  z-index: -1;
-}
-@keyframes rotate-aura {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 .vignette {
@@ -192,30 +173,26 @@ body::before {
 }
 
 /* Page 2 Specific CSS */
-.glass-card-premium {
-  background: var(--glass-card-bg);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-  border: 1px solid var(--glass-card-border);
+.card-surface-interactive {
+  background: var(--card-interactive-bg);
+  border: 1px solid var(--card-interactive-border);
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: var(--glass-card-shadow);
+  box-shadow: var(--card-interactive-shadow);
 }
-.glass-card-premium:hover {
-  border: 1px solid var(--glass-card-hover-border);
-  box-shadow: var(--glass-card-hover-shadow);
+.card-surface-interactive:hover {
+  border: 1px solid var(--card-interactive-hover-border);
+  box-shadow: var(--card-interactive-hover-shadow);
   transform: translateY(-12px);
 }
 .luminous-border {
-  border: 1px solid rgba(78, 222, 163, 0.15);
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(16, 185, 129, 0.1);
+  transition: border 0.3s ease, border-color 0.3s ease;
 }
 .luminous-border:hover {
-  border-color: rgba(78, 222, 163, 0.6);
-  box-shadow: 0 0 15px rgba(78, 222, 163, 0.2);
+  border-color: rgba(16, 185, 129, 0.4);
 }
 .progress-bar-fill {
-  background: linear-gradient(90deg, #10b981, #4fdbc8);
-  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+  background: linear-gradient(90deg, #059669, #10b981);
   position: relative;
   width: 0%; /* Initial state for animation */
 }
@@ -225,11 +202,11 @@ body::before {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0 0 15px #10b981;
+  box-shadow: 0 0 6px #10b981;
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
@@ -242,22 +219,22 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.glass-pill {
-  background: var(--glass-pill-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-pill-border);
-  color: var(--glass-pill-text);
+.badge-pill {
+  background: var(--badge-pill-bg);
+  border: 1px solid var(--badge-pill-border);
+  color: var(--badge-pill-text);
   font-weight: 600;
 }
 .btn-primary {
   background: var(--btn-primary-bg);
   box-shadow: var(--btn-primary-shadow);
   transition: all 0.3s ease;
+  color: rgb(14 21 17);
+  font-weight: 800;
 }
 .btn-primary:hover {
   box-shadow: var(--btn-primary-hover-shadow);
-  transform: scale(1.02);
+  transform: translateY(-2px);
 }
 .parallax-bg {
   pointer-events: none;

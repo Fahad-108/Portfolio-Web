@@ -86,7 +86,7 @@ export default function Contact() {
         <p className="max-w-2xl font-body-lg text-body-lg text-on-surface-variant/90 leading-relaxed">
           Have a project, internship opportunity, or just want to say hello? Feel free to reach out. I'm always open to discussing new ideas, collaborations, and exciting opportunities.
         </p>
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-start mt-8">
           <div className="h-[2px] w-48 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
         </div>
       </div>
@@ -127,7 +127,7 @@ export default function Contact() {
         <div className="lg:col-span-7">
           <form
             onSubmit={handleSubmit}
-            className="glass-premium p-10 rounded-[1rem] border border-outline-variant/20 shadow-[0_30px_60px_rgba(0,0,0,0.15)] space-y-8 relative"
+            className="glass-premium p-6 sm:p-10 rounded-[1rem] border border-outline-variant/20 shadow-[0_30px_60px_rgba(0,0,0,0.15)] space-y-8 relative"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-3">

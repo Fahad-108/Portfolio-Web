@@ -24,7 +24,7 @@ export default function Footer({ onNavigate }) {
   };
 
   return (
-    <footer id="footer" className="w-full relative bg-surface-container-lowest/20 backdrop-blur-3xl border-t border-white/10 pt-24 pb-12 overflow-hidden z-10">
+    <footer id="footer" className="w-full relative bg-surface-container-lowest/20 backdrop-blur-3xl border-t border-outline-variant/20 pt-24 pb-12 overflow-hidden z-10">
       {/* Background radial glow on bottom-center */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
@@ -61,8 +61,8 @@ export default function Footer({ onNavigate }) {
           </div>
 
           {/* Column 2: Navigation Links */}
-          <div className="md:col-span-3 space-y-6">
-            <h4 className="font-label-mono text-xs uppercase tracking-[0.2em] text-slate-900 dark:text-white font-bold pb-2 border-b border-outline-variant/20 w-fit">
+          <div className="md:col-span-3 space-y-6 text-center md:text-left">
+            <h4 className="font-label-mono text-xs uppercase tracking-[0.2em] text-slate-900 dark:text-white font-bold pb-2 border-b border-outline-variant/20 w-fit mx-auto md:mx-0">
               Navigation
             </h4>
             <ul className="space-y-4">
@@ -74,7 +74,7 @@ export default function Footer({ onNavigate }) {
                       e.preventDefault();
                       onNavigate(link.path, link.sectionId);
                     }}
-                    className="text-on-surface-variant/85 hover:text-primary transition-colors duration-300 text-sm font-semibold flex items-center gap-2.5 group"
+                    className="text-on-surface-variant/85 hover:text-primary transition-colors duration-300 text-sm font-semibold flex items-center justify-center md:justify-start gap-2.5 group"
                   >
                     <ArrowRight className="text-primary/40 group-hover:text-primary transition-colors group-hover:translate-x-1 duration-300" size={14} />
                     {link.name}
@@ -85,14 +85,14 @@ export default function Footer({ onNavigate }) {
           </div>
 
           {/* Column 3: Tech Stack Badges */}
-          <div className="md:col-span-4 space-y-6">
+          <div className="md:col-span-4 space-y-6 text-center md:text-left">
             <h4 className="font-label-mono text-xs uppercase tracking-[0.2em] text-slate-900 dark:text-white font-bold pb-2 border-b border-outline-variant/20 w-fit">
               Core Tech Stack
             </h4>
             <p className="text-on-surface-variant/70 text-xs md:text-sm font-medium leading-relaxed">
               Technologies I use to build responsive, scalable, and user-friendly web applications.
             </p>
-            <div className="flex flex-wrap gap-2.5 pt-1">
+            <div className="flex flex-wrap justify-center md:justify-start gap-2.5 pt-1">
               {techStack.map((tech) => (
                 <span
                   key={tech}
@@ -123,7 +123,7 @@ export default function Footer({ onNavigate }) {
           {/* Scroll to Top button */}
             <button
               onClick={handleBackToTop}
-              className="glass-premium px-5 py-3 rounded-xl font-label-mono text-xs font-bold uppercase tracking-wider flex items-center gap-2 hover:text-primary hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(16,185,129,0.1)] active:scale-95 transition-all duration-300 group cursor-pointer border border-white/5"
+              className="glass-premium px-5 py-3 rounded-xl font-label-mono text-xs font-bold uppercase tracking-wider flex items-center gap-2 hover:text-primary hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(16,185,129,0.1)] active:scale-95 transition-all duration-300 group cursor-pointer border border-outline-variant/20"
             >
               Back to Top
               <ArrowUp className="transition-transform duration-300 group-hover:-translate-y-1" size={16} />

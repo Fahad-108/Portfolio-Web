@@ -31,7 +31,7 @@ export default function Skills() {
     >
       <div className="mb-24">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-8">
-          <div className="max-w-3xl text-center md:text-left">
+          <div className="max-w-3xl text-left">
             <span className="font-label-mono text-label-mono text-primary/80 tracking-[0.2em] uppercase mb-6 block">
               Technical Skills
             </span>
@@ -43,14 +43,14 @@ export default function Skills() {
             </p>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-start">
           <div className="h-[2px] w-48 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Frontend */}
-        <div className="glass-card-premium p-10 rounded-[2rem] group relative">
+        <div className="glass-card-premium p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2rem] group relative">
           <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"></div>
           <div className="mb-8 flex justify-between items-center">
             <div className="p-3 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-all flex items-center justify-center">
@@ -101,7 +101,7 @@ export default function Skills() {
         </div>
 
         {/* Backend */}
-        <div className="glass-card-premium p-10 rounded-[2rem] group relative">
+        <div className="glass-card-premium p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2rem] group relative">
           <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"></div>
           <div className="mb-8 flex justify-between items-center">
             <div className="p-3 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-all flex items-center justify-center">
@@ -151,7 +151,7 @@ export default function Skills() {
         </div>
 
         {/* Database */}
-        <div className="glass-card-premium p-10 rounded-[2rem] group relative">
+        <div className="glass-card-premium p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2rem] group relative">
           <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"></div>
           <div className="mb-8 flex justify-between items-center">
             <div className="p-3 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-all flex items-center justify-center">
@@ -201,7 +201,7 @@ export default function Skills() {
         </div>
 
         {/* Tools */}
-        <div className="glass-card-premium p-10 rounded-[2rem] group relative">
+        <div className="glass-card-premium p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2rem] group relative">
           <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"></div>
           <div className="mb-8 flex justify-between items-center">
             <div className="p-3 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-all flex items-center justify-center">

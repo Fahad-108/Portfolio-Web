@@ -42,12 +42,12 @@ export default function Projects() {
         <p className="max-w-2xl font-body-lg text-body-lg text-on-surface-variant/90 leading-relaxed">
           Here are some of the projects I have built using modern web technologies. Each project reflects my focus on clean code, responsive design, and solving real-world problems.
         </p>
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-start mt-8">
           <div className="h-[2px] w-48 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Project Card 1 */}
         <div
           className="project-grid-item project-card glass-card-premium rounded-[2.5rem] overflow-hidden group flex flex-col h-full transition-all duration-300"
@@ -56,7 +56,7 @@ export default function Projects() {
         >
           <div className="relative overflow-hidden h-62">
             <img
-              className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
+              className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
               alt="Dukaan Digital POS"
               src={Dukaan}
             />
@@ -67,14 +67,14 @@ export default function Projects() {
               </span>
             </div>
           </div>
-          <div className="p-10 flex flex-col flex-grow">
+          <div className="p-6 sm:p-10 flex flex-col flex-grow">
             <h3 className="font-headline-sm text-headline-sm mb-6 text-on-surface font-bold">
               Dukaan Digital
             </h3>
             <p className="text-on-surface-variant/90 font-body-md mb-10 leading-relaxed min-h-[140px] flex-grow">
               A complete MERN Stack application featuring inventory management, sales and purchase tracking, expense management, customer credit (Udhaar), secure authentication, interactive dashboards, and a fully responsive user interface for modern retail businesses.
             </p>
-            <div className="mt-auto flex gap-6">
+            <div className="mt-auto flex gap-4 sm:gap-6">
               <a
                 className="flex-1 px-4 py-4 bg-surface-container/40 hover:bg-surface-container-high text-primary font-semibold rounded-2xl text-center transition-all border border-outline-variant/20 flex items-center justify-center gap-3 group/btn"
                 href="https://github.com/Fahad-108/Dukaan-Digital" target="_blank" rel="noopener noreferrer"
@@ -100,7 +100,7 @@ export default function Projects() {
         >
           <div className="relative overflow-hidden h-62">
             <img
-              className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
+              className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
               alt="Expense Tracker"
               src={Ticket}
             />
@@ -111,14 +111,14 @@ export default function Projects() {
               </span>
             </div>
           </div>
-          <div className="p-10 flex flex-col flex-grow">
+          <div className="p-6 sm:p-10 flex flex-col flex-grow">
             <h3 className="font-headline-sm text-headline-sm mb-6 text-on-surface font-bold">
               TicketXpress
             </h3>
             <p className="text-on-surface-variant/90 font-body-md mb-10 leading-relaxed min-h-[140px] flex-grow">
               A responsive frontend bus ticket booking platform featuring modern UI design, animated interactions with GSAP, authentication pages, and an intuitive booking experience.
             </p>
-            <div className="mt-auto flex gap-6">
+            <div className="mt-auto flex gap-4 sm:gap-6">
               <a
                 className="flex-1 px-4 py-4 bg-surface-container/40 hover:bg-surface-container-high text-primary font-semibold rounded-2xl text-center transition-all border border-outline-variant/20 flex items-center justify-center gap-3 group/btn"
                 href="https://github.com/Fahad-108/TicketXpress"
@@ -143,7 +143,7 @@ export default function Projects() {
         >
           <div className="relative overflow-hidden h-62">
             <img
-              className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
+              className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
               alt="Chat Application"
               src={Mini}
             />
@@ -154,14 +154,14 @@ export default function Projects() {
               </span>
             </div>
           </div>
-          <div className="p-10 flex flex-col flex-grow">
+          <div className="p-6 sm:p-10 flex flex-col flex-grow">
             <h3 className="font-headline-sm text-headline-sm mb-6 text-on-surface font-bold">
               MiniXpress
             </h3>
             <p className="text-on-surface-variant/90 font-body-md mb-10 leading-relaxed min-h-[140px] flex-grow">
               An all-in-one React application featuring task management, mini games, useful productivity tools, responsive design, and seamless Dark/Light mode switching.
             </p>
-            <div className="mt-auto flex gap-6">
+            <div className="mt-auto flex gap-4 sm:gap-6">
               <a
                 className="flex-1 px-4 py-4 bg-surface-container/40 hover:bg-surface-container-high text-primary font-semibold rounded-2xl text-center transition-all border border-outline-variant/20 flex items-center justify-center gap-3 group/btn"
                 href="https://github.com/Fahad-108/MINIEXPRESS" target="_blank" rel="noopener noreferrer"

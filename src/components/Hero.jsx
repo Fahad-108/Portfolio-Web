@@ -42,14 +42,14 @@ export default function Hero({ onNavigate }) {
   }, []);
 
   return (
-    <main id="home" className="relative min-h-screen flex flex-col items-center justify-center pt-6 pb-24 overflow-hidden">
+    <main id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Decorative Floaties & Background Blur */}
       <div className="absolute inset-0 pointer-events-none -z-10">
         {/* Atmospheric Blobs */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 blur-[200px] rounded-full"></div>
       </div>
 
-      <div className="max-w-container-max mx-auto px-margin-mobile md:px-gutter w-full grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center py-section-gap relative z-10">
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-gutter w-full grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center pb-10 pt-28 relative z-10">
         {/* Left Column Content */}
         <div className="flex flex-col gap-y-6 md:gap-y-10 text-left">
           {/* Header Block: Greeting, Name, Job Title */}

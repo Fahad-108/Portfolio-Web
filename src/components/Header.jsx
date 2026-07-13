@@ -83,7 +83,7 @@ export default function Header({ onNavigate, activePath }) {
           <div className="flex items-center gap-4">
             <a
               href="/Muhammad_Fahad_Raza_CV.pdf"
-              download
+              target="_blank"
               rel="noopener noreferrer"
               className="hidden lg:block bg-primary text-surface px-9 py-3.5 rounded-xl font-bold text-sm hover:bg-primary/90 border border-primary/25 transition-all hover:-translate-y-0.5 shadow-md active:scale-95 duration-200"
             >

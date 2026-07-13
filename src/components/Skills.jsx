@@ -29,7 +29,7 @@ export default function Skills() {
     <section
   ref={skillsRef}
   id="skills"
-  className={`relative py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto overflow-hidden transition-all duration-1000 ${
+  className={`relative pb-10 pt-28 px-margin-mobile md:px-gutter max-w-container-max mx-auto overflow-hidden transition-all duration-1000 ${
     isVisible
       ? "opacity-100 translate-y-0"
       : "opacity-0 translate-y-10"

@@ -44,9 +44,9 @@ export default function About() {
   ];
 
   const stats = [
-    { number: "10+", label: "Projects Built" },
-    { number: "15+", label: "Technologies" },
-    { number: "4+", label: "MERN Stack Apps" },
+    { number: "15", label: "Projects Built" },
+    { number: "10", label: "Technologies" },
+    { number: "24/7", label: "Learning" },
     { number: "2+", label: "Years Coding" },
   ];
 
@@ -54,7 +54,7 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className={`py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto relative transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      className={`pb-10 pt-28 px-margin-mobile md:px-gutter max-w-container-max mx-auto relative transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
     >
       {/* Background radial glow */}
@@ -99,7 +99,7 @@ export default function About() {
         </div>
 
         {/* Right Column: Info List */}
-        <div className="lg:col-span-5 space-y-8 pl-6 rounded-2xl border border-outline-variant/30 py-2 lg:ml-6">
+        <div className="lg:col-span-5 space-y-8 pl-6 rounded-2xl border border-primary/20 border-outline-variant/30 py-2 lg:ml-6">
           {infoCards.map((card, idx) => (
             <div key={idx} className="p-2  group flex items-start gap-4">
               <div className="p-3 bg-primary/10 rounded-xl text-primary group-hover:bg-primary/20 transition-all flex items-center justify-center shrink-0">

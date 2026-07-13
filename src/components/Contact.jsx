@@ -42,7 +42,7 @@ export default function Contact() {
     {
       title: "Whatsapp",
       value: "+92 343 6642014",
-      link: "tel:+923436642014",
+      link: "https://wa.me/923436642014",
       icon: "/whatsapp.svg",
     },
     {
@@ -69,7 +69,7 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className={`py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto relative transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      className={`pb-10 pt-28 px-margin-mobile md:px-gutter max-w-container-max mx-auto relative transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
     >
       {/* Background radial glow */}

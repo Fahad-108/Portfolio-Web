@@ -1,10 +1,13 @@
 import React from "react";
 import { Terminal, Link as LucideLink, Mail, ArrowRight, Heart, ArrowUp } from "lucide-react";
 
+
 export default function Footer({ onNavigate }) {
   const socialLinks = [
-    { name: "GitHub", url: "https://github.com/Fahad-108", icon: Terminal },
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/muhmmad-fahad-raza-779524372/", icon: LucideLink },
+    {
+      name: "GitHub", url: "https://github.com/Fahad-108", icon: "/github.svg",
+    },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/muhmmad-fahad-raza-779524372/", icon: "linkedin.svg" },
     { name: "Email", url: "mailto:fahiiraza8@gmail.com", icon: Mail },
   ];
 
@@ -38,7 +41,7 @@ export default function Footer({ onNavigate }) {
                 <span className="text-primary">Fahad Raza</span>
               </h3>
             </div>
-            
+
             <p className="text-on-surface-variant/80 text-sm md:text-base leading-relaxed max-w-md font-medium">
               Building modern web applications with the MERN Stack while focusing on performance, clean architecture, and intuitive user experiences.
             </p>
@@ -54,7 +57,18 @@ export default function Footer({ onNavigate }) {
                   className="glass-premium w-11 h-11 flex items-center justify-center rounded-xl hover:text-primary hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(16,185,129,0.15)] group"
                   title={social.name}
                 >
-                  <social.icon size={20} className="transition-transform duration-300 group-hover:scale-110" />
+                  {social.name === "Email" ? (
+                    <social.icon
+                      size={24}
+                      className="transition-transform duration-300 group-hover:scale-110"
+                    />
+                  ) : (
+                    <img
+                      src={social.icon}
+                      alt={social.name}
+                      className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
+                    />
+                  )}
                 </a>
               ))}
             </div>
@@ -121,13 +135,13 @@ export default function Footer({ onNavigate }) {
           </div>
 
           {/* Scroll to Top button */}
-            <button
-              onClick={handleBackToTop}
-              className="glass-premium px-5 py-3 rounded-xl font-label-mono text-xs font-bold uppercase tracking-wider flex items-center gap-2 hover:text-primary hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(16,185,129,0.1)] active:scale-95 transition-all duration-300 group cursor-pointer border border-outline-variant/20"
-            >
-              Back to Top
-              <ArrowUp className="transition-transform duration-300 group-hover:-translate-y-1" size={16} />
-            </button>
+          <button
+            onClick={handleBackToTop}
+            className="glass-premium px-5 py-3 rounded-xl font-label-mono text-xs font-bold uppercase tracking-wider flex items-center gap-2 hover:text-primary hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(16,185,129,0.1)] active:scale-95 transition-all duration-300 group cursor-pointer border border-outline-variant/20"
+          >
+            Back to Top
+            <ArrowUp className="transition-transform duration-300 group-hover:-translate-y-1" size={16} />
+          </button>
         </div>
       </div>
     </footer>

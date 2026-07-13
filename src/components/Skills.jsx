@@ -41,7 +41,7 @@ export default function Skills() {
             <span className="font-label-mono text-label-mono text-primary/80 tracking-[0.2em] uppercase mb-6 block">
               Technical Skills
             </span>
-            <h3 className="font-display-lg text-display-lg md:text-display-xl mb-8 text-gradient leading-tight">
+            <h3 className="font-display-lg text-display-lg md:text-display-xl mb-8 leading-tight">
               Skills & Technologies
             </h3>
             <p className="font-body-lg text-body-lg text-on-surface-variant/90 leading-relaxed">

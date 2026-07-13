@@ -40,28 +40,28 @@ export default function Contact() {
       icon: Mail,
     },
     {
-      title: "Phone",
+      title: "Whatsapp",
       value: "+92 343 6642014",
       link: "tel:+923436642014",
-      icon: Smartphone,
+      icon: "/whatsapp.svg",
     },
     {
       title: "Location",
-      value: "Pakistan",
-      link: "https://www.google.com/maps/place/Pakistan",
+      value: "Gujrat, Pakistan",
+      link: "https://www.google.com/maps/place/Gujrat,+Pakistan",
       icon: MapPin,
     },
     {
       title: "GitHub",
       value: "Fahad-108",
       link: "https://github.com/Fahad-108",
-      icon: Terminal,
+      icon: "/github.svg",
     },
     {
       title: "LinkedIn",
       value: "Muhammad Fahad Raza",
       link: "https://www.linkedin.com/in/muhmmad-fahad-raza-779524372/",
-      icon: Link,
+      icon: "/linkedin.svg",
     },
   ];
 
@@ -69,9 +69,8 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className={`py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto relative transition-all duration-1000 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      className={`py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto relative transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
     >
       {/* Background radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[160px] rounded-full pointer-events-none -z-10"></div>
@@ -80,7 +79,7 @@ export default function Contact() {
         <span className="font-label-mono text-label-mono text-primary tracking-[0.3em] uppercase mb-4 block">
           Get In Touch
         </span>
-        <h3 className="font-display-lg text-display-lg md:text-display-xl text-gradient mb-8 leading-tight">
+        <h3 className="font-display-lg text-display-lg md:text-display-xl mb-8 leading-tight">
           Let's Collaborate
         </h3>
         <p className="max-w-2xl font-body-lg text-body-lg text-on-surface-variant/90 leading-relaxed">
@@ -107,9 +106,20 @@ export default function Contact() {
                 rel="noreferrer"
                 className="flex items-center gap-5 p-4 rounded-xl hover:bg-surface-container/30 border border-transparent hover:border-outline-variant/20 transition-all duration-300 group"
               >
-                <div className="p-3 bg-primary/10 group-hover:bg-primary/20 rounded-xl text-primary transition-all flex items-center justify-center shrink-0">
-                  <detail.icon size={20} />
-                </div>
+                  <div className="p-3 bg-primary/10 group-hover:bg-primary/20 rounded-xl text-primary transition-all flex items-center justify-center shrink-0">
+                    {typeof detail.icon === "string" ? (
+                      <img
+                        src={detail.icon}
+                        alt={detail.title}
+                        className="w-5 h-5 group-hover:scale-110 transition-transform duration-300"
+                      />
+                    ) : (
+                      <detail.icon
+                        size={20}
+                        className="text-white group-hover:scale-110 transition-transform duration-300"
+                      />
+                    )}
+                  </div>
                 <div>
                   <h4 className="font-label-mono text-[11px] uppercase tracking-[0.15em] text-on-surface-variant/50">
                     {detail.title}

@@ -33,7 +33,7 @@ export default function About() {
     },
     {
       title: "Location",
-      value: "Pakistan",
+      value: "Gujrat, Pakistan",
       icon: MapPin,
     },
     {
@@ -65,7 +65,7 @@ export default function About() {
         <span className="font-label-mono text-label-mono text-primary tracking-[0.3em] uppercase mb-4 block">
           INTRODUCTION
         </span>
-        <h3 className="font-display-lg text-display-lg md:text-display-xl text-gradient mb-4 leading-tight">
+        <h3 className="font-display-lg text-display-lg md:text-display-xl mb-4 leading-tight">
           <span className="block">Building Digital</span>
           <span className="block">Experiences</span>
         </h3>

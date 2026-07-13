@@ -99,9 +99,9 @@ export default function About() {
         </div>
 
         {/* Right Column: Info List */}
-        <div className="lg:col-span-5 space-y-8 pl-6 border-l border-outline-variant/30 py-2 lg:ml-6">
+        <div className="lg:col-span-5 space-y-8 pl-6 rounded-2xl border border-outline-variant/30 py-2 lg:ml-6">
           {infoCards.map((card, idx) => (
-            <div key={idx} className="group flex items-start gap-4">
+            <div key={idx} className="p-2  group flex items-start gap-4">
               <div className="p-3 bg-primary/10 rounded-xl text-primary group-hover:bg-primary/20 transition-all flex items-center justify-center shrink-0">
                 <card.icon size={20} />
               </div>

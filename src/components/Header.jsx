@@ -150,7 +150,7 @@ export default function Header({ onNavigate, activePath }) {
         <div className="mt-auto">
           <a    
             href="/Muhammad_Fahad_Raza_Resume.pdf"
-            download
+            target="_blank"
             rel="noopener noreferrer"
             className="w-full text-center block bg-primary text-surface px-6 py-4 rounded-xl font-bold text-sm hover:bg-primary/90 border border-primary/25 transition-all active:scale-95 duration-200"
             onClick={() => setIsMenuOpen(false)}

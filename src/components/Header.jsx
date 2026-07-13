@@ -146,7 +146,7 @@ export default function Header({ onNavigate, activePath }) {
             );
           })}
         </div>
-
+  
         <div className="mt-auto">
           <a
             href="/Muhammad_Fahad_Raza_Resume.pdf"
